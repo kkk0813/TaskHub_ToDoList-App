@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #8875FF;
+    --dark-bg: #121212;
+    --card-bg: #1D1D1D;
+    --text-color: #FFFFFF;
+    --secondary-text: #AFAFAF;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 400px;
+    min-width: 400px;
+    max-height: 685px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: var(--secondary-text);
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-color);
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(136, 117, 255, 0.2);
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #7565e6;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid #333;
+    margin-top: 12px;
+}
+
+.btn-outline:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    color: var(--secondary-text);
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #333;
+}
+
+.divider span {
+    padding: 0 10px;
+    font-size: 13px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--secondary-text);
+    font-size: 20px;
+}
+
+.social-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--secondary-text);
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 8px;
+    color: var(--secondary-text);
+    font-size: 11px;
+    background-color: var(--card-bg);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .auth-card {
+        padding: 25px 20px;
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-color: var(--card-bg);
+    }
+    
+    .container {
+        padding: 0;
+    }
+    
+    .auth-card {
+        max-width: 100%;
+        padding: 25px 20px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+}

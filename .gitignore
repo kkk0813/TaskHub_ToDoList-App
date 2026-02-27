@@ -1,0 +1,6 @@
+uploads/profile_pictures/*
+!uploads/profile_pictures/.gitkeep
+last_auto_delete_date.txt
+last_reminder_date.txt
+includes/PDOconn.php
+includes/config.php
