@@ -75,7 +75,7 @@ $hasNotifications = !empty($notifications);
                                     <p class="notification-message"><?php echo htmlspecialchars($notification['message']); ?></p>
                                     <?php if (!empty($notification['task_id'])): ?>
                                     <div class="notification-actions">
-                                        <a href="get_task.php?id=<?php echo $notification['task_id']; ?>" class="notification-link">View Task</a>
+                                        <a href="../actions/get_task.php?id=<?php echo $notification['task_id']; ?>" class="notification-link">View Task</a>
                                     </div>
                                     <?php endif; ?>
                                 </div>

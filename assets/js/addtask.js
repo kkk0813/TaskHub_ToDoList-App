@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to reset form to "add" state
     function resetForm() {
         document.getElementById('addTaskForm').reset();
-        document.getElementById('addTaskForm').action = 'add_task.php';
+        document.getElementById('addTaskForm').action = '../actions/add_task.php';
         document.querySelector('.btn-submit').textContent = 'Add Task';
         // Remove task ID if it exists
         const taskIdInput = document.getElementById('taskId');
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         addTaskBtn.addEventListener('click', function() {
             // Make sure form is in "add" state
             resetForm();
-            document.getElementById('addTaskForm').action = 'add_task.php';
+            document.getElementById('addTaskForm').action = '../actions/add_task.php';
             document.querySelector('.btn-submit').textContent = 'Add Task';
             document.querySelector('#addTaskModal .modal-header h2').textContent = 'Add New Task';
             openModal();
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Change the form submission URL and button text
                 const form = document.getElementById('addTaskForm');
-                form.action = 'update_task.php';
+                form.action = '../actions/update_task.php';
                 document.querySelector('.btn-submit').textContent = 'Update Task';
                 
                 document.querySelector('#addTaskModal .modal-header h2').textContent = 'Edit Task';

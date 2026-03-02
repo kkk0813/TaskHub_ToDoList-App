@@ -20,7 +20,7 @@ include '../includes/PDOconn.php';
 $userId = $_SESSION['user_id'];
 
 // Create upload directory if it doesn't exist
-$uploadDir = 'uploads/profile_pictures/';
+$uploadDir = '../uploads/profile_pictures/';
 if (!file_exists($uploadDir)) {
     mkdir($uploadDir, 0777, true);
 }

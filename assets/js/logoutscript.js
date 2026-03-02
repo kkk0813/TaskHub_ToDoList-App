@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 showConfirmDialog('Are you sure you want to logout?', function(confirmed) {
                     if (confirmed) {
-                        window.location.href = 'includes/logout.php';
+                        window.location.href = '../includes/logout.php';
                     }
                 });
             });

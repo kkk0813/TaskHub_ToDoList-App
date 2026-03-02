@@ -7,7 +7,7 @@ include '../includes/PDOconn.php';
 require_once '../includes/notification-functions.php';
 
 // Check if need to send reminders today
-$lastReminderFile = __DIR__ . '/last_reminder_date.txt';
+$lastReminderFile = __DIR__ . '../last_reminder_date.txt';
 $today = date('Y-m-d');
 
 if (!file_exists($lastReminderFile) || file_get_contents($lastReminderFile) !== $today) {

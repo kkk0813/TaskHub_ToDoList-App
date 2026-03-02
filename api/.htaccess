@@ -1,0 +1,32 @@
+# ============================================================
+# TaskHub API - URL Rewriting Rules
+# ============================================================
+# 
+# WHAT THIS FILE DOES:
+# Without this file, to access a task, you'd need ugly URLs like:
+#   /api/index.php?path=tasks&id=5
+#
+# With this file, you get clean REST-style URLs:
+#   /api/tasks/5
+#
+# HOW IT WORKS:
+# When a request comes in like GET /api/tasks/5, Apache
+# internally rewrites it to: /api/index.php
+# The original URL path is preserved so index.php can read it.
+# ============================================================
+
+# Turn on the rewrite engine
+RewriteEngine On
+DirectorySlash Off
+RewriteBase /project/ToDoListApp/api/
+
+# If the requested file actually exists (like a real .php file), 
+# don't rewrite it — serve it directly.
+# This prevents the router from intercepting actual files.
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# For everything else, send the request to index.php
+# The [QSA] flag means "Query String Append" — if someone adds 
+# ?page=1 to the URL, it gets passed along to index.php
+# The [L] flag means "Last rule" — stop processing more rules
+RewriteRule ^(.*)$ index.php [QSA,L]
