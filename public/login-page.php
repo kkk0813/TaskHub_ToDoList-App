@@ -24,7 +24,7 @@ session_start();
                 <p class="subtitle">Please login to your account or create a new account to continue</p>
             </div>
             
-            <form action="includes/login.php" method="post">
+            <form action="../includes/login.php" method="post">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>

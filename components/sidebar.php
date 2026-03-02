@@ -2,7 +2,7 @@
 $activePage = isset($activePage) ? $activePage : '';
 
 // Get unread notification count
-require_once 'includes/notification-functions.php';
+require_once '../includes/notification-functions.php';
 $unreadCount = 0;
 if (function_exists('getUnreadNotificationCount')) {
     $unreadCount = getUnreadNotificationCount($pdo, $_SESSION['user_id']);
