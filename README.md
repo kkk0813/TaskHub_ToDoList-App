@@ -1,1 +1,1 @@
-It is a to-do list web app. I am still building a custom API for this web app in order to learn what is API and how to build one. The app is not working properly yet as I am still refactoring the old codebase.
+It is a to-do list web app which is one of my academic projects. I am still building a custom API for this web app in order to learn what is API and how to build one. The app is not working properly yet as I am still refactoring the old codebase.

@@ -148,6 +148,25 @@ switch ($resource) {
         break;
 
     // =====================
+    // PROFILE ROUTES
+    // =====================
+    case 'profile':
+        if ($method === 'PUT' && $id === null) {
+            // PUT /api/profile -> update profile info or password
+            require 'profile/update.php';
+        } elseif ($method === 'POST' && $id === 'picture') {
+            // POST /api/profile/picture -> upload profile image
+            require 'profile/picture.php';
+        } else {
+            http_response_code(405);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Available: PUT /api/profile, POST /api/profile/picture'
+            ]);
+        }
+        break;
+
+    // =====================
     // API ROOT / UNKNOWN ROUTES
     // =====================
     case '':
@@ -157,7 +176,7 @@ switch ($resource) {
             'message' => 'Welcome to TaskHub API',
             'version' => '1.0',
             'endpoints' => [
-                'POST /api/auth/register'       => 'Create new account',
+                'POST /api/auth/register'        => 'Create new account',
                 'POST /api/auth/login'           => 'Login and get token',
                 'GET /api/tasks'                 => 'List all tasks (auth required)',
                 'GET /api/tasks/{id}'            => 'Get single task (auth required)',
@@ -166,6 +185,8 @@ switch ($resource) {
                 'DELETE /api/tasks/{id}'         => 'Delete task (auth required)',
                 'GET /api/notifications'         => 'List notifications (auth required)',
                 'PUT /api/notifications/{id}'    => 'Mark as read (auth required)',
+                'PUT /api/profile'               => 'Update profile or password (auth required)',
+                'POST /api/profile/picture'      => 'Upload profile picture (auth required)',
             ]
         ]);
         break;
