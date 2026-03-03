@@ -64,5 +64,8 @@ session_start();
     <footer>
         <p>This business is fictitious and is part of a university course. © 2025 TaskHub</p>
     </footer>
+
+    <script src="../assets/js/api-helper.js"></script>
+    <script src="../assets/js/loginscript.js"></script>
 </body>
 </html>

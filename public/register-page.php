@@ -97,5 +97,9 @@ $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
     unset($_SESSION['errors']);
     unset($_SESSION['form_data']);
     ?>
+
+    <script src="../assets/js/api-helper.js"></script>
+    <script src="../assets/js/registerscript.js"></script>
+
 </body>
 </html>

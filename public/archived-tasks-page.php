@@ -81,6 +81,7 @@ $profilePicture = $userData['profile_picture'];
     <?php include '../components/task-modal.php'; ?>
     <?php include '../components/confirmation-dialog.php'; ?>
 
+    <script src="../assets/js/api-helper.js"></script>
     <script src="../assets/js/alerts.js"></script>
     <script src="../assets/js/addtask.js"></script>
     <script src="../assets/js/filters.js"></script>
